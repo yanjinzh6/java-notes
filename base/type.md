@@ -40,3 +40,11 @@
 ## 自动类型转换
 
 转换从低级到高级 byte,short,char—> int —> long—> float —> double
+
+## 注意
+
+String 是 final 类, 所以无法被继承
+
+new Integer(100) 中的参数如果是 -128~127 不会 new 新的 Integer 对象, 而是直接引用常量池中的 Integer 对象, 使用 Integer i = 100, i2 = 100, i3 = 150, i4 = 150 中 i == i2, i3 !== i4
+
+用最有效率的方法计算 2 乘以 8: 2 << 3 左移 3 位相当于乘以 2 的 3 次方, 右移 3 位相当于除以 2 的 3 次方
